@@ -28,13 +28,19 @@
 // Pin connected to RGB led string
 #define DATA_PIN 10
 
+#define RANDOM_MAX 10
+
+#define ON_DELAY_RAND 10
+
 // Method to set up LED string
 void LED_begin();
 
 void LED_test();
 
+void update_string(int step);
+
 // Method to step the value of a given LED. Will step based on the maximum step value 
-void calc_value(int ind, int max_step);
+void tick_LED(int ind, int max_step);
 
 #endif
 

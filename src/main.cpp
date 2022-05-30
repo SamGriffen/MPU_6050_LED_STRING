@@ -101,7 +101,9 @@ void setup() {
     #ifdef DEBUG
     Serial.begin(115200);
     while (!Serial); // wait for Leonardo enumeration, others continue immediately
+    #endif
 
+    #ifdef DEBUG
     // initialize device
     Serial.println(F("Initializing I2C devices..."));
     #endif
@@ -209,5 +211,6 @@ void loop() {
         digitalWrite(LED_PIN, blinkState);
     }
 
-    LED_test();
+    // update_string(1);
+    update_string(10);
 }
